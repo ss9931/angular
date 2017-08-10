@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <style>
+     input.ng-invalid {
+        background-color: lightblue;
+            }
+    </style>
+</head>
+
+<body  ng-app="myApp">
+    <!--
+    <div ng-app="" ng-init="quantity=1;cost=5">
+ 
+        <p>总价： {{ quantity * cost }}</p>
+    
+    </div>-->
+
+     <!--  <div ng-app="" ng-init="quantity=1;cost=5">
+         <p>总价: <span ng-bind="quantity * cost"></span></p>
+    </div>-->
+    <!--<div ng-app="" ng-init="firstName='John';lastName='Doe'">
+
+        <p>姓名: {{ firstName + " " + lastName }}</p>
+
+    </div>-->
+    <!--<div ng-app="" ng-init="person={firstName:'John',lastName:'Doe'}">
+ 
+        <p>姓名 {{ person.lastName }}</p>
+        
+    </div>-->
+     <!--<div ng-app="" ng-init="quantity=2;price=5">
+ 
+        <h2>价格计算器</h2>
+        
+        数量： <input type="number"    ng-model="quantity">
+        价格： <input type="number" ng-model="price">
+        
+        <p><b>总价：</b> {{ quantity * price }}</p>
+        
+    </div>
+
+    <div ng-app="" ng-init="firstName='John'">
+
+        <p>在输入框中尝试输入:</p>
+        <p>姓名: <input type="text" ng-model="firstName"></p>
+        <p>你输入的为: {{ firstName }}</p>
+
+    </div>
+    -->
+    
+   
+       
+        <form ng-app="" name="myForm">
+            输入你的名字:
+            <input name="myAddress" ng-model="text" required>
+        </form>
+
+
+
+    <runoob-directive></runoob-directive>
+
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive("runoobDirective", function() {
+            return {
+                template : "<h1>自定义指令!</h1>"
+            };
+        });
+    </script>
+</body>
+</html>
